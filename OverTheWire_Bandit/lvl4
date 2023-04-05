@@ -1,0 +1,23 @@
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ cd inhere
+bandit4@bandit:~/inhere$ ls -a
+.   -file00  -file02  -file04  -file06  -file08
+..  -file01  -file03  -file05  -file07  -file09
+bandit4@bandit:~/inhere$ cd ..
+bandit4@bandit:~$ file ./inhere
+./inhere: directory
+bandit4@bandit:~$ file ./inhere/*
+./inhere/-file00: data
+./inhere/-file01: data
+./inhere/-file02: data
+./inhere/-file03: data
+./inhere/-file04: data
+./inhere/-file05: Non-ISO extended-ASCII text, with NEL line terminators
+./inhere/-file06: Non-ISO extended-ASCII text, with no line terminators, with escape sequences
+./inhere/-file07: ASCII text
+./inhere/-file08: data
+./inhere/-file09: data
+bandit4@bandit:~$ cd ./inhere/
+bandit4@bandit:~/inhere$ cat ./-file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
